@@ -25,11 +25,26 @@ export default function linkedListFactory(){
 
    }
 
+   function size(){
+    if(!head){
+        return 0
+    }
+    let counter = 1
+    let tempNode = head
+    while(tempNode.nextNode){
+        counter ++
+        tempNode = tempNode.nextNode
+    }
+    return counter
+
+   }
+
    function getHead(){
     return head
    }
 
-   return {append, prepend, getHead}
+
+   return {append, prepend, getHead, size}
 }
 
     
