@@ -43,8 +43,29 @@ export default function linkedListFactory(){
     return head
    }
 
+   function getTail(){
+    if(!head){
+        return head
+    }
+    let tempNode = head
+    while(tempNode.nextNode){
+        tempNode = tempNode.nextNode
+    }
+    return tempNode
+   }
 
-   return {append, prepend, getHead, size}
+
+   function getAtIndex(index){
+    if(index == 0){
+        return null
+    }
+    let tempNode = head
+    for(let x = 1; x < index; x++){
+        tempNode = tempNode.nextNode
+    }
+    return tempNode
+   }
+   return {append, prepend, getHead, size, getTail, getAtIndex}
 }
 
     
