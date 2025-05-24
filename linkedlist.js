@@ -9,7 +9,7 @@ export default function linkedListFactory(){
         let newNode = nodeFactory(value, null)
         if(!head){
             head = newNode
-            return head
+            return
         }
         let tempNode = head
         while(tempNode.nextNode){
@@ -19,9 +19,17 @@ export default function linkedListFactory(){
         tempNode.nextNode = newNode
     }
 
-   
+   function prepend(value){
+    let newNode = nodeFactory(value, head)
+    head = newNode
 
-    return {append}
+   }
+
+   function getHead(){
+    return head
+   }
+
+   return {append, prepend, getHead}
 }
 
     
