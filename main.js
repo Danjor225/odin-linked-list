@@ -24,6 +24,9 @@ console.log(testingLinkList.toString())
 testingLinkList.insertAt(70,0)
 testingLinkList.insertAt(100,100)
 console.log(testingLinkList.toString())
+testingLinkList.removeAt(5)
+console.log(testingLinkList.toString())
+
 
 // console.log(testingLinkList.getHead())
 // testingLinkList.prepend(3)

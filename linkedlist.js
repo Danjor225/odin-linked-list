@@ -153,8 +153,29 @@ export default function linkedListFactory(){
     }
         previousNode.nextNode = nodeFactory(value, tempNode)
    }
+
+   function removeAt(index){
+    if(!head){
+        return
+    }
+    if(index == 0){
+        head = head.nextNode
+        return
+    }
+    if(index > size()){
+        pop()
+        return
+    }
+        let tempNode = head
+        let previousNode = null
+    for(let x = 0; x < index; x++){
+        previousNode = tempNode
+        tempNode = tempNode.nextNode
+    }
+        previousNode.nextNode = tempNode.nextNode
+   }
     
-   return {append, prepend, getHead, size, getTail, getAtIndex, pop, checkListContains,find, toString, insertAt}
+   return {append, prepend, getHead, size, getTail, getAtIndex, pop, checkListContains,find, toString, insertAt, removeAt}
 }
 
     
