@@ -36,3 +36,14 @@ console.log(testingLinkList.toString())
 // console.log('Get Index:')
 // console.log(testingLinkList.getAtIndex(1))
 // console.log(testingLinkList.getAtIndex(3))
+
+const list = linkedListFactory();
+
+list.append("dog");
+list.append("cat");
+list.append("parrot");
+list.append("hamster");
+list.append("snake");
+list.append("turtle");
+
+console.log(list.toString())
