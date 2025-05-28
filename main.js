@@ -17,6 +17,12 @@ console.log(testingLinkList.find(90))
 console.log(testingLinkList.find(7))
 console.log(testingLinkList.find(2))
 console.log(testingLinkList.find(910))
+
+console.log(testingLinkList.toString())
+testingLinkList.insertAt(69, 1)
+console.log(testingLinkList.toString())
+testingLinkList.insertAt(70,0)
+testingLinkList.insertAt(100,100)
 console.log(testingLinkList.toString())
 
 // console.log(testingLinkList.getHead())
