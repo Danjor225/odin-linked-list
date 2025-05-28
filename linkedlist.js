@@ -65,7 +65,23 @@ export default function linkedListFactory(){
     }
     return tempNode
    }
-   return {append, prepend, getHead, size, getTail, getAtIndex}
+
+   function pop(){
+
+        if(!head){
+            return
+        }
+        let tempNode = head
+        while(tempNode.nextNode.nextNode){
+            tempNode = tempNode.nextNode
+
+        }
+        tempNode.nextNode = null
+
+
+
+   }
+   return {append, prepend, getHead, size, getTail, getAtIndex, pop}
 }
 
     
