@@ -78,10 +78,23 @@ export default function linkedListFactory(){
         }
         tempNode.nextNode = null
 
-
-
    }
-   return {append, prepend, getHead, size, getTail, getAtIndex, pop}
+
+   function checkListContains(value){
+    if(!head){
+        return false
+    }
+    let tempNode = head
+    while(tempNode.nextNode){
+        if(tempNode.value == value){
+            return true
+        }
+        tempNode = tempNode.nextNode
+    }
+    return tempNode.value == value
+   }
+    
+   return {append, prepend, getHead, size, getTail, getAtIndex, pop, checkListContains}
 }
 
     
