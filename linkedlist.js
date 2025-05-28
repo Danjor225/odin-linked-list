@@ -111,8 +111,27 @@ export default function linkedListFactory(){
     }
     return tempNode.value == value ? counter : null
    }
+
+   function toString(){
+
+     let listDisplay = ''
+        if(!head){
+            
+            return 'There is nothing in this list'
+        }
+        let tempNode = head
+        while(tempNode.nextNode){
+            listDisplay += tempNode.value + ' -> '
+            tempNode = tempNode.nextNode
+            
+
+        }
+        listDisplay += tempNode.value
+
+        return listDisplay
+   }
     
-   return {append, prepend, getHead, size, getTail, getAtIndex, pop, checkListContains,find}
+   return {append, prepend, getHead, size, getTail, getAtIndex, pop, checkListContains,find, toString}
 }
 
     
